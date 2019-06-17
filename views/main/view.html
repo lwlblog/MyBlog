@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="listbox animation">
+    <h1>{{content.title}}</h1>
+    <p>
+        作者：<span>{{userInfo.username}}</span>&nbsp;
+        时间：<span>{{content.addTime|date('Y-m-d H:i:s', -8*60)}}</span>&nbsp;
+        阅读：<span>{{content.views}}</span>&nbsp;
+        评论：<span>{{content.comments.length}}</span>
+    </p>
+    <div>
+        {{content.content}}
+    </div>
+</div>
+<div class="listbox comment animation">
+    <h3>评论：<span>一共 <em id="messageCount"></em> 条评论</span></h3>
+    {% if userInfo._id %}
+        <textarea name="" id="com_con" rows="2"></textarea>
+        <input type="hidden" id="contentId" value="{{content.id}}">
+        <button class="but">提 交</button>
+    {% else %}
+    <h6>你还没有登录，请先登录！</h6>
+    {% endif %}
+    <div class="con" id="commentsCon"></div>
+    <div class="bottom">
+        <ul class="page">
+            <li id="up">上一页</li>
+            <li></li>
+            <li id="down">下一页</li>
+        </ul>
+    </div>
+</div>
+<div class="alert_back">
+    <i></i>
+    <p id="comBack">
+        <label for="">回复： <span></span></label>
+        <input type="hidden" name="backTime" value="">
+        <input type="text" name="huifu"><button class="backBut">提交</button>
+    </p>
+</div>
+<script src="/public/js/comment.js"></script>
+{% endblock %}

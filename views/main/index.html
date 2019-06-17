@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% for content in contents %}
+<div class="listbox animation">
+    <h1>{{content.title}}</h1>
+    <p>
+        作者：<span>{{content.user.username}}</span>&nbsp;
+        时间：<span>{{content.addTime|date('Y-m-d H:i:s', -8*60)}}</span>&nbsp;
+        阅读：<span>{{content.views}}</span>&nbsp;
+        评论：<span>{{content.comments.length}}</span>
+    </p>
+    <dfn>
+        <p>{{content.description}}</p>
+    </dfn>
+    <div><a href="/view?contentid={{content.id}}">阅读全文</a></div>
+</div>
+{% endfor %}
+<div class="bottom animation">
+    <ul>
+        {% if page <= 1 %}
+        <li>没有上一页了</li>
+        {% else %}
+        <li><a href="/?category={{category}}&page={{page-1}}">上一页</a></li>
+        {% endif %}
+
+        {% if pages == 0 %}
+        <li>
+            <i>0</i>/<i>0</i>
+        </li>
+        {% else %}
+        <li>
+            <i>{{page}}</i>/<i>{{pages}}</i>
+        </li>
+        {% endif %}
+
+        {% if page >= pages %}
+        <li>没有下一页了</li>
+        {% else %}
+        <li><a href="/?category={{category}}&page={{page+1}}">下一页</a></li>
+        {% endif %}
+    </ul>
+</div>
+{% endblock %}

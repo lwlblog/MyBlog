@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    color: #333;
+    background: url(/public/image/bg.jpg) no-repeat;
+    background-attachment: fixed;
+}
+ul{
+    list-style: none;
+}
+label{
+    display: block;
+}
+a{
+    color: #333;
+    display: block;
+    text-decoration: none;
+}
+
+
+.header{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+}
+.header ul{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 920px;
+}
+.header li{
+    flex: 1;
+}
+.header li a{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.header li a:hover{
+    transition: 0.3s;
+    color: #fff;
+    background-color: rgba(62, 98, 255, 0.952);
+}
+.active{
+    color: #fff;
+    background-color: rgba(62, 98, 255, 0.952);
+}
+
+
+.main{
+    position: relative;
+    top: 40px;
+    overflow: hidden;
+    width: 920px;
+    margin: 20px auto 0;
+}
+.main>div{
+    float: left;
+}
+.listbox{
+    width: 600px;
+    margin: 0 20px 20px 0;
+    padding: 30px; 
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.bottom{
+    width: 600px;
+    height: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.bottom ul{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom li{
+    font-size: 12px;
+    line-height: 40px;
+}
+.bottom a:hover{
+    color: rgba(62, 98, 255, 0.952);
+}
+.listbox>h1{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.listbox>p{
+    height: 40px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+}
+.listbox>p>span{
+    color: rgba(62, 98, 255, 0.952);;
+}
+.listbox>dfn>p{
+    height: 40px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 40px;
+    margin: 10px 0;
+}
+.listbox>div>a{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #fa3;
+}
+.listbox>div>a:hover{
+    background-color: rgb(253, 155, 17);
+}
+
+.user>div{
+    width: 300px;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.info>#time{
+    font-size: 30px;
+    margin-top: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+.info>#time>span{
+    margin: 0 10px;
+}
+.info p{
+    font-size: 12px;
+    margin: 10px 0;
+}
+.info .username{
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+.login>h3,.info>h3{
+    padding-bottom: 4px;
+    border-bottom: 2px solid #ccc;
+}
+.login>h3>span,.info>h3>span{
+    padding-bottom: 4px;
+    border-bottom: 2px solid #fa3;
+}
+.login>h6{
+    color: red;
+    margin: 5px 0;
+    text-align: right;
+}
+.login>form{
+    overflow: hidden;
+    margin-top: 20px;
+}
+.login label{
+    font-size: 14px;
+    float: right;
+    margin-bottom: 10px;
+}
+.login input{
+    color: #666;
+    width: 170px;
+    height: 28px;
+    outline: none;
+    padding: 0 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.login input[type="password"] {
+    letter-spacing: 2px;
+}
+.login input[type="submit"],
+.comment .but {
+    width: 184px;
+    height: 30px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: #fa3;
+    border-radius: 4px;
+}
+.login input[type="submit"]:hover,
+.comment .but:hover{
+    background-color: rgb(253, 155, 17);
+}
+.login form p{
+    font-size: 12px;
+    float: right;
+}
+.login form a,.info a{
+    color: rgba(62, 98, 255, 0.952);
+    display: inline;
+    text-decoration: underline;
+}
+
+
+
+/* ------用户评论------ */
+.comment h3,
+.comment h3 span{
+    height: 25px;
+    line-height: 25px;
+}
+.comment h3 span{
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+}
+.comment textarea{
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.comment .but{
+    width: 100%;
+}
+.comment h6{
+    text-align: center;
+    color: red;
+    height: 20px;
+    line-height: 20px;
+}
+.comment div{
+    font-size: 12px;
+}
+.con>.bac{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.con p:first-child{
+    display: flex;
+    justify-content: space-between;
+}
+.con p span,
+.con p a{
+    color: #999;
+}
+.con p em{
+    font-style: normal;
+    font-weight: bold;
+}
+.con>div{
+    margin: 5px 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.comment>.bottom{
+    padding: 0 5px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+.comment>.bottom li{
+    cursor: pointer;
+}
+
+/* 回复 */
+.alert_back,
+.alert_back p{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.alert_back{
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: rgb(81, 217, 241);
+}
+.alert_back p{
+    width: 90%;
+    height: 60px;
+}
+.alert_back label{
+    height: 28px;
+    font-size: 14px;
+}
+.alert_back span{
+    font-weight: bold;
+}
+.alert_back input{
+    width: 300px;
+    height: 30px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-right: none;
+}
+.alert_back button{
+    float: right;
+    display: block;
+    border: 1px solid #ccc;
+    width: 54px;
+    height: 32px;
+}
+.alert_back i{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: url('../image/timg.jpg') no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+
+/* 动画 */
+.animation{
+    animation: admission 1.2s;
+}
+.animation:nth-child(1){
+    animation: admission 0.4s;
+}
+.animation:nth-child(2){
+    animation: admission 0.6s;
+}
+.animation:nth-child(3){
+    animation: admission 0.8s;
+}
+.animation:nth-child(4){
+    animation: admission 1s;
+}
+@keyframes admission {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

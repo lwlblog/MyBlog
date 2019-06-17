@@ -1,0 +1,22 @@
+{
+  "name": "blog-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.4",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.4.1",
+    "cookies": "^0.6.1",
+    "express": "^4.14.0",
+    "jquery": "^3.4.1",
+    "markdown": "^0.5.0",
+    "mongoose": "^4.5.7",
+    "swig": "^1.4.2"
+  }
+}
