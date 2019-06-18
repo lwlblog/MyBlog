@@ -7,11 +7,11 @@
 4. 注册账号默认都是非管理员，如果需要操作后台则需要在数据库手动添加一个管理员账号，格式为如下
 ```javascript
 //用户名
-    username: String,
-    //密码
-    password: String,
-    //是否是管理员
-    isAdmin: {
-        type: Boolean,
-        default: false
-    }
+username: String,
+//密码
+password: String,
+//是否是管理员
+isAdmin: {
+    type: Boolean,
+    default: false
+}
